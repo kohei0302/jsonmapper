@@ -237,7 +237,7 @@ class JsonMapper
                         . ' cannot be converted to a string'
                     );
                 }
-                settype($jvalue, $type);
+                // settype($jvalue, $type);
                 $this->setProperty($object, $accessor, $jvalue);
                 continue;
             }
@@ -424,7 +424,7 @@ class JsonMapper
                     $array[$key] = null;
                 } else {
                     if ($this->isSimpleType($class)) {
-                        settype($jvalue, $class);
+                        // settype($jvalue, $class);
                         $array[$key] = $jvalue;
                     } else {
                         $array[$key] = $this->createInstance(
